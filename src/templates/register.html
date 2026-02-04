@@ -1,30 +1,31 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+    <section id="estilos_reg_form">
+        <form action="{{ url_for('auth.register_submit') }}" method="post" id="formulario_registro">
     
-    <form action="{{ url_for('auth.register_submit') }}" method="post">
-
-        <div>
-            <label>Nombre</label>
-            <input type="text" name="user_name" placeholder="Ej: Alberto">
-        </div>
-
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Ej: Alberto">
-        </div>
-
-        <div>
-            <label>Contraseña</label>
-            <input type="password" name="password_user" placeholder="Ej: contraseña123">
-        </div>
-
-        <div>
-            <label>Confirmar contraseña</label>
-            <input type="password" name="password_confirm" placeholder="Ej: contraseña123">
-        </div>
-        <button type="submit">Registrarse</button>
-    </form>
+            <div class="divs">
+                <label>Nombre</label>
+                <input type="text" name="user_name" placeholder="Ej: Alberto">
+            </div>
+    
+            <div class="divs">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Ej: Alberto">
+            </div>
+    
+            <div class="divs">
+                <label>Contraseña</label>
+                <input type="password" name="password_user" placeholder="Ej: contraseña123">
+            </div>
+    
+            <div class="divs">
+                <label>Confirmar contraseña</label>
+                <input type="password" name="password_confirm" placeholder="Ej: contraseña123">
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
 
 
 {% endblock %}

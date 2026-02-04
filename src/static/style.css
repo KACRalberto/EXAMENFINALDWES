@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+#estilos_reg_form {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#estilos_reg_form #formulario_registro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+#estilos_reg_form #formulario_registro .divs {
+  display: flex;
+  flex-direction: column;
+}
+#estilos_reg_form #formulario_registro button {
+  background-color: #AEC5EB;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  padding: 1rem 1.5rem;
+}
+
+#estilos_log_form {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#estilos_log_form #formulario_log {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+#estilos_log_form #formulario_log .divs {
+  display: flex;
+  flex-direction: column;
+}
+#estilos_log_form #formulario_log button {
+  background-color: #AEC5EB;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  padding: 1rem 1.5rem;
+}
+
+header {
+  display: flex;
+  gap: 1rem;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header a:hover {
+  color: #AEC5EB;
+}
+header .aparece {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+header .aparece a {
+  text-decoration: none;
+  color: black;
+}
+header .aparece a:hover {
+  color: #AEC5EB;
+}
+
+.seccion_dash {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.seccion_dash .aqui_favs {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.seccion_dash .aqui_favs img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
