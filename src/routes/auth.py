@@ -13,12 +13,17 @@ auth = Blueprint("auth", __name__, url_prefix="/auth")
 
 @auth.route("/login")
 def login_form():
+    if session:
+         return redirect(url_for('auth.dashboard'))
     return render_template("login.html")
 
 
 
 @auth.route("/register")
 def register_form():
+    if session:
+         return redirect(url_for('auth.dashboard'))
+    
     return render_template("register.html")
 
 

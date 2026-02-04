@@ -11,6 +11,7 @@
         {% if session.get("user_token","") %}
 
             <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+            <a href="{{ url_for('auth.dashboard') }}">IR A DASH</a>
             {% if session.get("user_rol","") == "admin" %}
                 <a href="{{ url_for('auth.IMADMIN') }}">IR A AUTH</a>
             {% endif %}
