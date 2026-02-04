@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+    <form action="{{ url_for('auth.login_submit') }}" method="post">
+
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Ej: Alberto">
+        </div>
+
+        <div>
+            <label>Contraseña</label>
+            <input type="password" name="password_user" placeholder="contraseña123">
+        </div>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+
+{% endblock %}

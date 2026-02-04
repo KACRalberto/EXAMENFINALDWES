@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>DASHBOARD</h1>
+    {% for personaje in personajes_favoritos %}
+        <div>
+            {{ personaje["description_personaje"] }}
+            <img src="{{ personaje['img_personaje'] }}" alt="IMAGEN NO ENCONTRADA">
+            
+            {{ personaje["id_personaje"] }}
+        </div>
+
+    {% endfor %}
+{% endblock %}

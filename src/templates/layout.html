@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        {% if session.get("user_token","") %}
+
+            <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+            {% if session.get("user_rol","") == "admin" %}
+                <a href="{{ url_for('auth.IMADMIN') }}">IR A AUTH</a>
+            {% endif %}
+        {% else %}            
+            <ul>
+                <li>
+                    <a href="{{ url_for('auth.login_form') }}">IR A LOGIN</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('auth.register_form') }}">IR A REGISTER</a>
+                </li>
+            </ul>
+            {% if session.get("rol","") == "admin" %}
+                <a href="{{ url_for('auth.IMADMIN') }}">IR A AUTH</a>
+            {% endif %}
+        {% endif %}
+
+        <a href="{{ url_for('about') }}">About</a>
+    </header>
+    {% with messages = get_flashed_messages(with_categories = true)  %}
+
+        {% if messages %}
+            {% for categoria, msg in messages %}
+                {{ categoria }} : {{ msg }}
+            {% endfor %}
+        {% endif %}
+        
+    {% endwith %}
+
+
+    {% block content %}
+        
+    {% endblock %}
+</body>
+</html>
